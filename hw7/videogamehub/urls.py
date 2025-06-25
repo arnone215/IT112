@@ -26,4 +26,10 @@ urlpatterns = [
     path(
         "games/<int:game_id>/", views.game_detail, name="game_detail"
     ),  # Show game detail
+    # ✅ API endpoints for HW10
+    path("api/games/", views.api_all_games, name="api_all_games"),  # All games (GET)
+    path(
+        "api/game/", views.api_single_game, name="api_single_game"
+    ),  # One game by ?id=
+    path("api/games/add/", views.api_add_game, name="api_add_game"),  # Add game (POST)
 ]
