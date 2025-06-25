@@ -15,9 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.contrib import admin
 from django.urls import path
-from .views import home_view
+from homepage import views  # importing views from the homepage app
 
 urlpatterns = [
-    path("", home_view, name="home"),
+    path("admin/", admin.site.urls),
+    path("", views.home, name="home"),  # Default home page (HW8)
+    path("games/", views.game_list, name="game_list"),  # List all games
+    path(
+        "games/<int:game_id>/", views.game_detail, name="game_detail"
+    ),  # Show game detail
 ]

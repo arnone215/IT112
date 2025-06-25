@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ game.title }}</title>
+  </head>
+  <body>
+    <h1>{{ game.title }}</h1>
+    <p><strong>Genre:</strong> {{ game.genre }}</p>
+    <p><strong>Platform:</strong> {{ game.platform }}</p>
+    <p><a href="{% url 'game_list' %}">Back to Game List</a></p>
+  </body>
+</html>
