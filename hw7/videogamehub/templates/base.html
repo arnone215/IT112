@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <h1>
+      {% if user_name %} Hello, {{ user_name }}! {% else %} Welcome to Video
+      Game Hub! {% endif %}
+    </h1>
+    <img
+      src="{% static 'images/salishSoundersLogo.png' %}"
+      alt="Greeting Image"
+      width="400"
+    />
+  </body>
+</html>
